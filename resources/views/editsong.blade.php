@@ -8,6 +8,7 @@
                 
                 <div class="card-body ">
                   {{ Form::open(['action' => ['SongsController@update', $song->id], 'method'=>'POST']) }}
+                    @method('PUT')
                     
                     <div class="form-group">
                       {{Form::label('title', 'Title')}}
@@ -28,7 +29,7 @@
                       {{Form::label('video', 'Video')}}
                       {{Form::text('video', $song->video_url, ['class' => 'form-control', 'placeholder' => 'Enter Youtube Song URL'])}}
                     </div>
-                    {{Form::hidden('_method', 'PUT')}}
+                    {{-- {{Form::hidden('_method', 'PUT')}} --}}
                     
                     <div>
                       {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}

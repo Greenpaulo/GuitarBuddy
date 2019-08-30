@@ -7,6 +7,12 @@ use App\Song;
 
 class SongsController extends Controller
 {
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
+
+
   /**
    * Display a listing of the resource.
    *
@@ -61,7 +67,8 @@ class SongsController extends Controller
    */
   public function show($id)
   {
-    //
+    $song = Song::find($id);
+    return view('showsong')->with('song', $song);
   }
 
   /**
@@ -111,6 +118,9 @@ class SongsController extends Controller
    */
   public function destroy($id)
   {
-    //
+    $song = Song::find($id);
+    $song->delete();
+
+    return redirect('/dashboard')->with('success', 'Song Removed');
   }
 }

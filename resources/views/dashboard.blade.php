@@ -25,13 +25,14 @@
                           </tr> --}}
                         @foreach($songs as $song)
                           <tr>
-                              <td>{{$song->title}}</td>
+                              <td><a href="/songs/{{$song->id}}">{{$song->title}}</a></td>
                               {{-- Edit page link --}}
                               <td><a href="/songs/{{$song->id}}/edit" class="btn btn-secondary float-right">Edit</a></td>
                               {{-- Delete Form --}}
                               <td>
                                 {{ Form::open(['action'=>['SongsController@destroy', $song->id], 'method'=>'POST']) }}
-                                @method('DELETE')
+                                  @method('DELETE')
+                                  {{ Form::submit('Delete', ['class'=>'btn btn-danger'])}}
                                 {{ Form::close() }}
                               </td>
                           </tr>
