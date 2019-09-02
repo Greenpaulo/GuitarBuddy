@@ -84,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Guitar Buddy
+                    GuitarBuddy
                 </div>
 
                 <div class="links">
