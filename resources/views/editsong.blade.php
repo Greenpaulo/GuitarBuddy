@@ -3,8 +3,11 @@
 @section('content')
 <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Edit Song <a href="/dashboard" class="btn btn-success btn-sm float-right">Go Back</a></div>
+            <div class="card bg-dark text-white">
+                <div class="card-header">
+                  <span class="card-heading">Edit Song</span>
+                  <a href="/dashboard" class="btn btn-success btn-sm float-right">Go Back</a>
+                </div>
                 
                 <div class="card-body ">
                   {{ Form::open(['action' => ['SongsController@update', $song->id], 'method'=>'POST']) }}

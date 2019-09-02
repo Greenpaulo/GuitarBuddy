@@ -3,8 +3,11 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Repertoire <a href="/songs/create" class="btn btn-success btn-sm float-right">Add Song</a></div>
+            <div class="card bg-dark text-white">
+                <div class="card-header">
+                  <span class="card-heading">Repertoire</span> 
+                  <a href="/songs/create" class="btn btn-success float-right">Add Song</a>
+                </div>
 
                 <div class="card-body">
                     {{-- @if (session('status'))
@@ -27,7 +30,7 @@
                           <tr>
                               <td><a href="/songs/{{$song->id}}">{{$song->title}}</a></td>
                               {{-- Edit page link --}}
-                              <td><a href="/songs/{{$song->id}}/edit" class="btn btn-secondary float-right">Edit</a></td>
+                              <td><a href="/songs/{{$song->id}}/edit" class="btn btn-primary float-right">Edit</a></td>
                               {{-- Delete Form --}}
                               <td>
                                 {{ Form::open(['action'=>['SongsController@destroy', $song->id], 'method'=>'POST']) }}

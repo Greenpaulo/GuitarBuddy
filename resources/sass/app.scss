@@ -6,3 +6,25 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//Custom CSS
+
+body {
+  background-image: url('../../public/images/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-heading {
+  font-size: 1.8rem;
+}
+
+.heading {
+  font-size: 1.2rem;
+}
+
+// .main-content {
+//   position: absolute;
+//   top: 12vh;
+//   left: 20vw;
+// }

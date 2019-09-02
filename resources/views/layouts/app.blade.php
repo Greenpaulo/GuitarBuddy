@@ -19,9 +19,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     GuitarBuddy
@@ -73,11 +74,23 @@
         </nav>
 
         <main class="py-4">
+          {{-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/images/1.jpg" class="d-block w-100 h-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/2.jpg" class="d-block w-100 h-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div> --}}
           <div class="container">
             @include('inc.messages')
             @yield('content')
           </div>
-        </main>
     </div>
 </body>
 </html>
